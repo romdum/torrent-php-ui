@@ -1,0 +1,10 @@
+# IntelliJ project files
+.idea
+
+# Composer package
+vendor/
+composer.lock
+
+# Apache
+.htaccess
+.htpasswd

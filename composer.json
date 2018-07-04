@@ -1,0 +1,15 @@
+{
+    "name": "romdum/torrent-downloader",
+    "description": "Torrent download PHP GUI",
+    "require": {
+        "kleiram/transmission-php": "dev-master",
+        "kriswallsmith/buzz": "0.16.x"
+    },
+    "license": "GPL V2",
+    "authors": [
+        {
+            "name": "Romain Duminil",
+            "email": "romain@duminil.eu"
+        }
+    ]
+}
