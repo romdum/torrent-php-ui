@@ -40,4 +40,23 @@ class TorrentController
         }
         return false;
     }
+
+    /**
+     * Can be executed automatically when a torrent is finished.
+     */
+    public static function zipAll()
+    {
+        require_once __DIR__ . '/../../../vendor/autoload.php';
+        require_once __DIR__ . '/../../function.php';
+
+        $transmission = transmissionConnection();
+        $torrents = $transmission->all();
+        $torrentCtrl = new TorrentController();
+
+        foreach( $torrents as $torrent ){
+            if( $torrent->isFinished() && ! file_exists( $torrent->getDownloadDir() . '/' .  $torrent->getName() . '.zip' ) ){
+                $torrentCtrl->zipTorrent($torrent);
+            }
+        }
+    }
 }
