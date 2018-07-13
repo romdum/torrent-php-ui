@@ -3,7 +3,8 @@
     "description": "Torrent download PHP GUI",
     "require": {
         "kleiram/transmission-php": "dev-master",
-        "kriswallsmith/buzz": "0.16.x"
+        "kriswallsmith/buzz": "0.16.x",
+        "kartik-v/bootstrap-fileinput": "dev-master"
     },
     "license": "GPL V2",
     "authors": [
